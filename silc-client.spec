@@ -5,8 +5,6 @@ Version:	0.6
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Source0:	http://silcnet.org/download/%{name}-%{version}.tar.bz2
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	glib-devel >= 1.2.0
