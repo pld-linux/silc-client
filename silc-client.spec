@@ -38,7 +38,7 @@ autoconf
 	--with-simdir=%{_libdir}/%{name}/modules \
 	--with-etcdir=%{_sysconfdir}/%{name} \
 	--with-logsdir=/tmp
-	
+
 %{__make}
 
 %install
@@ -53,7 +53,7 @@ install -d $RPM_BUILD_ROOT%{perl_sitearch}
 	docdir=$RPM_BUILD_ROOT%{_docdir}
 
 rm -f $RPM_BUILD_ROOT%{_sysconfdir}/%{name}/silcd.conf
-      
+
 gzip -9nf CHANGES CREDITS README TODO doc/FAQ doc/example_silc.conf
 
 %clean
