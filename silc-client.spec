@@ -2,7 +2,7 @@ Summary:	Secure Internet Live Conferencing
 Summary(pl):	SIRC - bezpieczne konferencje na ¿ywo poprzez internet
 Name:		silc-client
 Version:	0.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://silcnet.org/download/%{name}-%{version}.tar.bz2
@@ -11,7 +11,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	perl-base >= 1:5.6.1
 URL:		http://silcnet.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
