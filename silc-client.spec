@@ -32,7 +32,7 @@ konferencyjnych - ca³a reszta jest odmnienna od znanej z IRC.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure \
 	--with-helpdir=%{_datadir}/%{name}/help \
 	--with-simdir=%{_libdir}/%{name}/modules \
