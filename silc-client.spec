@@ -6,10 +6,11 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://silcnet.org/download/%{name}-%{version}.tar.bz2
-BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	glib-devel >= 1.2.0
-BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	perl-devel >= 5.6.1
 URL:		http://silcnet.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +32,7 @@ konferencyjnych - ca³a reszta jest odmnienna od znanej z IRC.
 %setup -q
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure \
 	--with-helpdir=%{_datadir}/%{name}/help \
@@ -54,14 +55,12 @@ install -d $RPM_BUILD_ROOT%{perl_sitearch}
 
 rm -f $RPM_BUILD_ROOT%{_sysconfdir}/%{name}/silcd.conf
 
-gzip -9nf CHANGES CREDITS README TODO doc/FAQ doc/example_silc.conf
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc/*.gz
+%doc CHANGES CREDITS README TODO doc/FAQ doc/example_silc.conf
 %attr(755,root,root) %{_bindir}/*
 %dir %{_sysconfdir}/%{name}
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}/*
