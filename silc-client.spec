@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://silcnet.org/download/%{name}-%{version}.tar.bz2
+# Source0-md5:	e81887e2864454f2194be22b006953f1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel >= 1.2.0
