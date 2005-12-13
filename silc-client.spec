@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES CREDITS README TODO doc/FAQ doc/example_silc.conf
 %attr(755,root,root) %{_bindir}/*
 %dir %{_sysconfdir}/%{name}
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/*
 
 %dir %{_libdir}/%{name}
 %dir %{_libdir}/%{name}/modules
