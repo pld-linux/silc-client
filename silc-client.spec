@@ -1,5 +1,5 @@
 Summary:	Secure Internet Live Conferencing
-Summary(pl):	SIRC - bezpieczne konferencje na øywo poprzez internet
+Summary(pl.UTF-8):   SIRC - bezpieczne konferencje na ≈ºywo poprzez internet
 Name:		silc-client
 Version:	0.6
 Release:	2
@@ -23,11 +23,11 @@ Biggest similarity between SILC and IRC is that they both provide
 conferencing services and that SILC has almost same commands as IRC.
 Other than that they are nothing alike.
 
-%description -l pl
-SILC (Secure Internet Live Conferencing) to protokÛ≥ dostarczaj±cy
-bezpiecznych us≥ug w Internecie poprzez niezabezpieczone ≥±cza. SILC
-jest podobny do IRC poniewaø tak samo jak IRC dostarcza us≥ug
-konferencyjnych - ca≥a reszta jest odmnienna od znanej z IRC.
+%description -l pl.UTF-8
+SILC (Secure Internet Live Conferencing) to protok√≥≈Ç dostarczajƒÖcy
+bezpiecznych us≈Çug w Internecie poprzez niezabezpieczone ≈ÇƒÖcza. SILC
+jest podobny do IRC poniewa≈º tak samo jak IRC dostarcza us≈Çug
+konferencyjnych - ca≈Ça reszta jest odmnienna od znanej z IRC.
 
 %prep
 %setup -q
