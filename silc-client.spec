@@ -1,5 +1,5 @@
 Summary:	Secure Internet Live Conferencing
-Summary(pl.UTF-8):   SIRC - bezpieczne konferencje na żywo poprzez internet
+Summary(pl.UTF-8):	SIRC - bezpieczne konferencje na żywo poprzez internet
 Name:		silc-client
 Version:	0.6
 Release:	2
