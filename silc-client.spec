@@ -3,8 +3,8 @@
 # Conditional build:
 %bcond_with	perl	 # Perl support (requires perl-Irssi)
 
-Summary:	Secure Internet Live Conferencing
-Summary(pl.UTF-8):	SIRC - bezpieczne konferencje na żywo poprzez Internet
+Summary:	Secure Internet Live Conferencing client
+Summary(pl.UTF-8):	Klient SIRC (Secure Internet Live Conferencing)
 Name:		silc-client
 Version:	1.1.11
 Release:	1
@@ -28,18 +28,16 @@ BuildRequires:	silc-toolkit-devel >= 1.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A: SILC (Secure Internet Live Conferencing) is a protocol which
-provides secure conferencing services in the Internet over insecure
-channel. SILC is IRC like although internally they are very different.
-Biggest similarity between SILC and IRC is that they both provide
-conferencing services and that SILC has almost same commands as IRC.
-Other than that they are nothing alike.
+SILC (Secure Internet Live Conferencing) is a secure conferencing
+network. Silc is the SILC client which is used to connect to SILC
+server and the SILC network. The silc client resembles IRC clients to
+make the using easier for new users.
 
 %description -l pl.UTF-8
-SILC (Secure Internet Live Conferencing) to protokół dostarczający
-bezpiecznych usług w Internecie poprzez niezabezpieczone łącza. SILC
-jest podobny do IRC ponieważ tak samo jak IRC dostarcza usług
-konferencyjnych - cała reszta jest odmnienna od znanej z IRC.
+SILC (Secure Internet Live Conferencing) to sieć do bezpiecznych
+konferencji internetowych na żywo. Silc to klient SILC służący do
+łączenia się z serwerem i siecią SILC. Klient silc przypomina
+programy klienckie IRC, aby ułatwić korzystanie nowym użytkownikom.
 
 %prep
 %setup -q
