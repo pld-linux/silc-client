@@ -1,0 +1,20 @@
+--- silc-client-1.1.11/apps/irssi/src/core/network.c.orig	2014-05-12 19:53:02.000000000 +0200
++++ silc-client-1.1.11/apps/irssi/src/core/network.c	2021-02-27 21:37:18.687764401 +0100
+@@ -356,7 +356,7 @@
+ 
+ 	status = g_io_channel_read_chars(handle, buf, len, &ret, &err);
+ 	if (err != NULL) {
+-	        g_warning(err->message);
++	        g_warning("%s", err->message);
+ 	        g_error_free(err);
+ 	}
+ 	if (status == G_IO_STATUS_ERROR || status == G_IO_STATUS_EOF)
+@@ -377,7 +377,7 @@
+ 
+ 	status = g_io_channel_write_chars(handle, (char *) data, len, &ret, &err);
+ 	if (err != NULL) {
+-	        g_warning(err->message);
++	        g_warning("%s", err->message);
+ 	        g_error_free(err);
+ 	}
+ 	if (status == G_IO_STATUS_ERROR)

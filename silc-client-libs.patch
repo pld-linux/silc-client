@@ -1,0 +1,30 @@
+--- silc-client-1.1.11/configure.ac.orig	2014-05-13 08:47:22.000000000 +0200
++++ silc-client-1.1.11/configure.ac	2021-02-27 18:59:41.935662691 +0100
+@@ -635,12 +635,11 @@
+ 
+   if test x$compile_libs = xfalse; then
+     LIBSUBDIR=
+-    LIBS="$SILC_LIBS $LIBS"
+     CFLAGS="$CFLAGS $SILC_CFLAGS"
+-    LIBS="$SILCCLIENT_LIBS $LIBS"
+     CFLAGS="$CFLAGS $SILCCLIENT_CFLAGS"
+   else
+-    LDFLAGS="-L\$(silc_top_srcdir)/lib $LDFLAGS"
++    SILC_LIBS="\$(silc_top_srcdir)/lib/libsilc.la"
++    SILCCLIENT_LIBS="\$(silc_top_srcdir)/lib/libsilc.la"
+   fi
+ fi
+ 
+--- silc-client-1.1.11/apps/irssi/src/silc/core/Makefile.am.orig	2014-05-13 08:46:59.000000000 +0200
++++ silc-client-1.1.11/apps/irssi/src/silc/core/Makefile.am	2021-02-27 19:00:07.735522921 +0100
+@@ -7,9 +7,7 @@
+ 
+ if SILCPLUGIN
+ EXTRA_CFLAGS=-DSILC_PLUGIN
+-LBDD= \
+-	$(top_srcdir)/../../lib/libsilc.la \
+-	$(top_srcdir)/../../lib/libsilcclient.la
++LBDD=$(SILCCLIENT_LIBS) $(SILC_LIBS)
+ LTLB= libsilc_core.la
+ NILB=
+ LBLDFLGS= \
