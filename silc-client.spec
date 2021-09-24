@@ -7,7 +7,7 @@ Summary:	Secure Internet Live Conferencing client
 Summary(pl.UTF-8):	Klient SIRC (Secure Internet Live Conferencing)
 Name:		silc-client
 Version:	1.1.11
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Communications
 #Source0Download: http://silcnet.org/client.html
